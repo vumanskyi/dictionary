@@ -9,9 +9,9 @@ LANGUAGE = {
 }
 
 
-def include_model(sourcs):
+def include_model(source):
     words = Words()
-    words.set_source(sourcs)
+    words.set_source(source)
 
 
 def choose_translation(lang):
