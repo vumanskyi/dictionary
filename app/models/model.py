@@ -1,12 +1,10 @@
 import json
+from app.source.enine import choose_translation
 
 class Model:
-    @property
+
     def get_source(self):
         return self.__source
-
-    def set_source(self, source):
-        self.__source = source
 
     def method(self):
         print('This is model class')
@@ -17,3 +15,6 @@ class Model:
         except ValueError as e:
             return False
         return True
+
+    def set_language(self, lang):
+        self.__source = choose_translation(lang)
