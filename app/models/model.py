@@ -2,12 +2,11 @@ import json
 from app.source.enine import choose_translation
 
 class Model:
+    def __init__(self, lang):
+        self.set_language(lang)
 
     def get_source(self):
         return self.__source
-
-    def method(self):
-        print('This is model class')
 
     def is_json(self, data):
         try:

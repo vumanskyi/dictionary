@@ -12,8 +12,9 @@ class Words(Model):
         return self.__word
 
     def get_result(self):
-        if self.__word in self.get_source:
-            print(self.get_source[self.__word.lower()])
+        if self.__word in self.get_source():
+            words = self.get_source()
+            return words[self.__word.lower()]
         else:
-            print("The word does not exists in vocabulary")
+            return "The word does not exists in vocabulary"
 
